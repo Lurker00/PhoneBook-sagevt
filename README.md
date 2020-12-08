@@ -127,3 +127,6 @@ adb shell settings put system screen_brightness 150
 The first command ensures that the applet is not running.
 
 You may restart your device after that.
+
+# Comments? Questions?
+Welcome to this forum and thread: https://phonebook-mania.boards.net/thread/66/more-phonebook-android-device. Please don't try to contact me by other means regrding this projetc while this link remains here.
