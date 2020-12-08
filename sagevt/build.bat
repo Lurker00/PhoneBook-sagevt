@@ -5,7 +5,8 @@ goto :eof
 
 :chksize
 if %~z1 == 0 (
-	copy build\outputs\apk\release\sagevt-release-unsigned.apk sagevt.jar
+	mkdir release 2> NUL
+	copy build\outputs\apk\release\sagevt-release-unsigned.apk release\sagevt.jar
 ) else (
 	type errors.txt
 )
