@@ -95,12 +95,23 @@ export CLASSPATH=${ANDROID_DATA}sagevt.jar;
 exec app_process ${ANDROID_DATA} com.sagetech.sagevt.Main debug=true density=220 landscape=true dim=true disableHWOverlays=true sendback=true ime=com.apedroid.hwkeyboardhelper/.IME
 ```
 ## The use
-Connect your Android device to the PC, launch console, go to the directory with unzipped package files and run `run_sagevt.cmd`. You should see the output like this:
+Connect your Android device to the PC, launch console, go to the directory with unzipped package files and run `run_sagevt.cmd`. The parameters from the package are: `debug=true landscape=true dim=true`. You should see the output like this:
 ```
+killall: sagevt.i: No such process
+sagevt.jar: 1 file pushed. 2.6 MB/s (20698 bytes in 0.008s)
+script.sh: 1 file pushed. 0.0 MB/s (260 bytes in 0.006s)
+sagevt is forking: 8858
+sagevt forked
+started: 8888<-8858
+Start listening
+DeviceControl started
+ScreenRotation started
+baseBrightness: 150
+Orientation: 0
 ```
 The device should change to reflect selected parameters. Press <kbd>Ctrl</kbd><kbd>C</kbd> or disconnect the cable to stop the applet. The device should restore its state.
 
-Now connect it to the PhoneBook to see the result in real life.
+Now connect your Android device to the PhoneBook to see the result in real life.
 
 ## Uninstall
 Connect the device to PC and run `uninstall_sagevt.cmd`. Next time you attach the device to the PhoneBook, the standard applet will be injected and used.
@@ -114,3 +125,5 @@ adb shell wm density reset
 adb shell settings put system screen_brightness 150
 ```
 The first command ensures that the applet is not running.
+
+You may restart your device after that.
