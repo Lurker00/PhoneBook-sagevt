@@ -25,7 +25,7 @@ This new version demonstrates the following possibilities:
 * Force landscape orientation. All the apps, including those that usually request portrait orientation, work in landscape.
 * Dim the screen brightness to the minimum, to save the battery.
 * Activate input method editor (IME), more suitable for the physical keyboard. I use [External Keyboard Helper Pro](https://play.google.com/store/apps/details?id=com.apedroid.hwkeyboardhelper).
-* Send two Back key events at the start and at the end of PhoneBook session, to make Anyware app to close. It starts automatically on device attach and detach events, which I find quite annoying.
+* Send two <kbd>Back</kbd> key events at the start and at the end of PhoneBook session, to make Anyware app to close. It starts automatically on device attach and detach events, which I find quite annoying.
 
 When the device is disconnected from the PhoneBook, all the affected parameters are restored to their original values.
 
