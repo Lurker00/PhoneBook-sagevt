@@ -63,7 +63,7 @@ Type `adb shell wm size` to check your current screen size *and* the order of th
 Type `adb shell wm density` to chech the current pixel density, to start from.
 
 ## The package
-The release zip-archive contains the following files:
+Please download the [most recent release](https://github.com/Lurker00/PhoneBook-sagevt/releases/latest). The release zip-archive contains the following files:
 * `sagevt.jar` - the applet to be installed on your Android device.
 * `script.sh` - the script launch script to be installed on your Android device. It contains the applet's command line to edit for optional parameters.
 * `install_sagevt.cmd` - Windows installation script.
