@@ -56,7 +56,7 @@ My version of the applet extensively uses undocumented API. I've tested it under
 I provide installation scripts as Windows `cmd`-files only. They contain nothing but `adb` calls, so I hope any Linux user can convert them to shell scripts.
 
 ## Make your device ready
-To prepare your Android device, connect it to PC and, from console, type commands `adb shell`, then `su`. Check in the console that `su` is not unknown command. Chech the device screen to grant su permission to the shell, without asking next time. Type `ls /data/local/tmp` to be sure your `su` is actually working. Type `exit` twice to quit su and shell.
+To prepare your Android device, connect it to PC and, from console, type commands `adb shell`, then `su`. Check in the console that `su` is not unknown command. Check the device screen to grant su permission to the shell, without asking next time. Type `ls /data/local/tmp` to be sure your `su` is actually working. Type `exit` twice to quit su and shell.
 
 Type `adb shell wm size` to check your current screen size *and* the order of the screen width and height. Usually it is `widthxheight`, presuming portrait orientation, but some devices may have physically landscape orientation.
 
@@ -74,13 +74,13 @@ Unzip the files into an empty directory.
 
 ## The applet parameters
 Each parameter has a form of `name=value`, with no spaces inside. Read below for supported parameters with example values:
-* `debug=true` - feed applet debug output to the console. Default: false.
+* `debug=true` - feeds applet debug output to the console. Default: false.
 * `size=1080x1920` - sets screen resolution. Default: don't change.
 * `density=220` - sets the pixel density (220 is recommended for 1080x1920). Default: don't change.
-* `dim=true` - dim the screen backlight. Default: false.
-* `landscape=true` - force landscape orientation. Default: false.
-* `sendback=true` - send two Back key press events on device attach and detach, to close Anyware app. Default: false.
-* `ime=com.apedroid.hwkeyboardhelper/.IME` - use this IME during PhoneBook session. Default: don't change. Theexample is for [External Keyboard Helper Pro](https://play.google.com/store/apps/details?id=com.apedroid.hwkeyboardhelper).
+* `dim=true` - dims the screen backlight. Default: false.
+* `landscape=true` - forces landscape orientation. Default: false.
+* `sendback=true` - sends two <kbd>Back</kbd> key press events on device attach and detach, to close Anyware app. Default: false.
+* `ime=com.apedroid.hwkeyboardhelper/.IME` - use this IME during PhoneBook session. Default: don't change. The example is for [External Keyboard Helper Pro](https://play.google.com/store/apps/details?id=com.apedroid.hwkeyboardhelper).
 
 One more option that is only possible while the applet runs with su rights:
 * `disableHWOverlays=true` = turn Developer optiion "Disable HW Overlays" on. Default: false. This option may be required if the selected screen resolution is higher than physical device screen resolution.
