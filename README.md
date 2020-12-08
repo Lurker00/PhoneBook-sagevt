@@ -1,4 +1,4 @@
-**WARNING: Please read the wohle description with attention, to avoid possible problems!**
+**WARNING: Please read the whole description with attention, to avoid possible problems!**
 
 # What is it?
 This repository is dedicated to a part of the firmware for [Anyware PhoneBook](https://github.com/Lurker00/PhoneBook/). If you have such a device, and
