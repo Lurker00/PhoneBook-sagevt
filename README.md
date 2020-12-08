@@ -1,5 +1,5 @@
 **WARNING: Please read the whole description with attention, to avoid possible problems!**<br />
-**DISCLAIMER: This software extensively uses undocumented API. I've tested it under Android 6-10, but real world devices may have different behavior. No warranty at all: use it at your own risk and responsibility!**
+**DISCLAIMER: This software extensively uses undocumented API. I've tested it under Android 6-10 emulators, but real world devices may have different behavior. No warranty at all: use it at your own risk and responsibility!**
 
 # What is it?
 This repository is dedicated to a part of the firmware for [Anyware PhoneBook](https://github.com/Lurker00/PhoneBook/). If you have such a device, and
