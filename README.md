@@ -1,4 +1,4 @@
-**WARNING: Please read the whole description with attention, to avoid possible problems!**</ br>
+**WARNING: Please read the whole description with attention, to avoid possible problems!**<br />
 **DISCLAIMER: This software extensively uses undocumented API. I've tested it under Android 6-10, but real world devices may have different behavior. No warranty at all: use it at your own risk and responsibility!**
 
 # What is it?
