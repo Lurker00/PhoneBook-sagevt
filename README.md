@@ -1,4 +1,5 @@
-**WARNING: Please read the whole description with attention, to avoid possible problems!**
+**WARNING: Please read the whole description with attention, to avoid possible problems!**</ br>
+**DISCLAIMER: This software extensively uses undocumented API. I've tested it under Android 6-10, but real world devices may have different behavior. No warranty at all: use it at your own risk and responsibility!**
 
 # What is it?
 This repository is dedicated to a part of the firmware for [Anyware PhoneBook](https://github.com/Lurker00/PhoneBook/). If you have such a device, and
@@ -40,6 +41,9 @@ This is solved by the installation script I wrote, that protects the files by fi
 
 ## Android restriction for screen resolution
 Android does not allow to set the screen size more than twice than the physical size. I.e. if your screen has height (in portrait) less than 960 pixels, you can't set it to 1920 or more. This should not be a problem for most devices on the market, but my phone has 240x432 screen and Android patched against this restriction.
+
+## Your Android build may be not supported
+My version of the applet extensively uses undocumented API. I've tested it under Android 6-10, but real world devices may have different behavior.
 
 # How to use?
 ## First of all:
@@ -92,9 +96,19 @@ exec app_process ${ANDROID_DATA} com.sagetech.sagevt.Main debug=true density=220
 Connect your Android device to the PC, launch console, go to the directory with unzipped package files and run `run_sagevt.cmd`. You should see the output like this:
 ```
 ```
-The device should change to reflect selected parameters. Press <kbd>Ctrl-C</kbd> or disconnect the cable to stop the applet. The device should restore its state.
+The device should change to reflect selected parameters. Press <kbd>Ctrl</kbd><kbd>C</kbd> or disconnect the cable to stop the applet. The device should restore its state.
 
 Now connect it to the PhoneBook to see the result in real life.
 
 ## Uninstall
 Connect the device to PC and run `uninstall_sagevt.cmd`. Next time you attach the device to the PhoneBook, the standard applet will be injected and used.
+
+# Troubleshooting
+If something went wrong, the following commands should bring your device into a useful state:
+```
+adb shell su -c "killall sagevt.i"
+adb shell wm size reset 
+adb shell wm density reset
+adb shell settings put system screen_brightness 150
+```
+The first command ensures that the applet is not running.
