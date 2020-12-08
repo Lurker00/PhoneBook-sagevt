@@ -62,6 +62,7 @@ The release zip-archive contains the following files:
 * `script.sh` - the script launch script to be installed on your Android device. It contains the applet's command line to edit for optional parameters.
 * `install_sagevt.cmd` - Windows installation script.
 * `run_sagevt.cmd` - Windows script to install and then run the applet. Useful to tune the parameters.
+* `uninstall_sagevt.cmd` - Windows script to uninstall the package.
 
 Unzip the files into an empty directory.
 
@@ -78,7 +79,7 @@ Each parameter has a form of `name=value`, with no spaces inside. Read below for
 One more option that is only possible while the applet runs with su rights:
 * `disableHWOverlays=true` = turn Developer optiion "Disable HW Overlays" on. Default: false. This option may be required if the selected screen resolution is higher than physical device screen resolution.
 
-Example of `script.sh`:
+Example of my `script.sh`:
 ```
 ANDROID_DATA=/data/local/tmp/.sagevt/;
 CLASSPATH=${ANDROID_DATA}sagevt.jar;
@@ -87,3 +88,13 @@ export CLASSPATH=${ANDROID_DATA}sagevt.jar;
     
 exec app_process ${ANDROID_DATA} com.sagetech.sagevt.Main debug=true density=220 landscape=true dim=true disableHWOverlays=true sendback=true ime=com.apedroid.hwkeyboardhelper/.IME
 ```
+## The use
+Connect your Android device to the PC, launch console, go to the directory with unzipped package files and run `run_sagevt.cmd`. You should see the output like this:
+```
+```
+The device should change to reflect selected parameters. Press <kbd>Ctrl-C</kbd> or disconnect the cable to stop the applet. The device should restore its state.
+
+Now connect it to the PhoneBook to see the result in real life.
+
+## Uninstall
+Connect the device to PC and run `uninstall_sagevt.cmd`. Next time you attach the device to the PhoneBook, the standard applet will be injected and used.
