@@ -81,7 +81,7 @@ Each parameter has a form of `name=value`, with no spaces inside. Read below for
 * `landscape=true` - forces landscape orientation. Default: false.
 * `sendback=true` - sends two <kbd>Back</kbd> key press events on device attach and detach, to close Anyware app. Default: false.
 * `ime=com.apedroid.hwkeyboardhelper/.IME` - use this IME during PhoneBook session. Default: don't change. The example is for [External Keyboard Helper Pro](https://play.google.com/store/apps/details?id=com.apedroid.hwkeyboardhelper).
-* `su=true` - uses su to fork the worker process. Default: true (as the workaround).
+* `su=true` - uses su to fork the worker process. Default: true (as the [workaround](#anyware-app-kills-the-applet-process-on-device-detach)).
 
 One more option that is only possible while the applet runs with su rights:
 * `disableHWOverlays=true` = turn Developer optiion "Disable HW Overlays" on. Default: false. This option may be required if the selected screen resolution is higher than physical device screen resolution.
