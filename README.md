@@ -45,7 +45,7 @@ This is solved by the installation script I wrote, that protects the files by fi
 Android does not allow to set the screen size more than twice than the physical size. I.e. if your screen has height (in portrait) less than 960 pixels, you can't set it to 1920 or more. This should not be a problem for most devices on the market, but my phone has 240x432 screen and Android patched against this restriction.
 
 ## Your Android build may be not supported
-My version of the applet extensively uses undocumented API. I've tested it under Android 6-10, but real world devices may have different behavior.
+My version of the applet extensively uses undocumented API. I've tested it under Android 6-10 emulators, but real world devices may have different behavior.
 
 # How to use?
 ## First of all:
