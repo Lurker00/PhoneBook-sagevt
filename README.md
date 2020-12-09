@@ -65,7 +65,7 @@ Type `adb shell wm density` to chech the current pixel density, to start from.
 ## The package
 Please download the [most recent release](https://github.com/Lurker00/PhoneBook-sagevt/releases/latest). The release zip-archive contains the following files:
 * `sagevt.jar` - the applet to be installed on your Android device.
-* `script.sh` - the script launch script to be installed on your Android device. It contains the applet's command line to edit for optional parameters.
+* `script.sh` - the launch script to be installed on your Android device. It contains the applet's command line to edit for optional parameters.
 * `install_sagevt.cmd` - Windows installation script.
 * `run_sagevt.cmd` - Windows script to install and then run the applet. Useful to tune the parameters.
 * `uninstall_sagevt.cmd` - Windows script to uninstall the package.
@@ -84,7 +84,7 @@ Each parameter has a form of `name=value`, with no spaces inside. Read below for
 * `su=true` - uses su to fork the worker process. Default: true (as the [workaround](#anyware-app-kills-the-applet-process-on-device-detach)).
 
 One more option that is only possible while the applet runs with su rights:
-* `disableHWOverlays=true` = turn Developer optiion "Disable HW Overlays" on. Default: false. This option may be required if the selected screen resolution is higher than physical device screen resolution.
+* `disableHWOverlays=true` = turn Developer option "Disable HW Overlays" on. Default: false. This option may be required if the selected screen resolution is higher than physical device screen resolution.
 
 Example of my `script.sh`:
 ```
