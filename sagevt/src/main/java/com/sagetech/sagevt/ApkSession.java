@@ -3,6 +3,7 @@ package com.sagetech.sagevt;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
@@ -39,7 +40,8 @@ public class ApkSession extends Thread {
     private boolean openServerSocket() {
         closeServerSocket();
         try {
-            serverSocket = new ServerSocket(25112);
+            // Security: accept only 1 connection, listen localhost only
+            serverSocket = new ServerSocket(25112, 1, InetAddress.getLocalHost());
             serverSocket.setReuseAddress(true);
             return true;
         } catch (IOException e) {
