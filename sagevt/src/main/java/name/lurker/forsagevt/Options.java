@@ -14,6 +14,7 @@ public class Options {
     private boolean disableHWOverlays = false;
     private boolean sendBack          = false;
     private String ime                = "";
+    private boolean su                = true;
 
     public int getDensity() { return density; }
 
@@ -30,6 +31,8 @@ public class Options {
     public boolean getSendBack() { return sendBack; }
 
     public String getIME() { return ime; }
+
+    public boolean useSu() { return su; }
 
     private void setOption(final String option) {
         String[] pair = option.split("=");
@@ -63,6 +66,8 @@ public class Options {
             ime = pair[1];
         } else if("debug".equals(pair[0])) {
             Log.debug = Boolean.parseBoolean(pair[1]);
+        } else if("su".equals(pair[0])) {
+            su = Boolean.parseBoolean(pair[1]);
         } else {
             Log.i("Unknown option: "+option);
         }

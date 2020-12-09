@@ -48,7 +48,7 @@ public class Main {
         if (options.watchPid() <= 0) {
             // su is required because Anyware app kills the process instead,
             // making impossible to restore the device state
-            forkMe(args, true);
+            forkMe(args, options.useSu());
             // It will not come here on USB disconnect
             SGVTLog.msg("stopped: "+android.os.Process.myPid());
             return;
