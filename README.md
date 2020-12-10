@@ -51,7 +51,7 @@ My version of the applet extensively uses undocumented API. I've tested it under
 ## First of all:
 * You have to be familiar with command line, Windows or Linux.
 * You need to have installed and working `adb`.
-* If you are Windows user, you need a text editor that aware of Unix/Linux text file line ends. It seems that Windows 10 Notepat works correctly. [Notepad++](https://notepad-plus-plus.org/) is recommended.
+* If you are Windows user, you need a text editor that aware of Unix/Linux text file line ends. It seems that Windows 10 Notepad works correctly. [Notepad++](https://notepad-plus-plus.org/) is recommended.
 
 I provide installation scripts as Windows `cmd`-files only. They contain nothing but `adb` calls, so I hope any Linux user can convert them to shell scripts.
 
