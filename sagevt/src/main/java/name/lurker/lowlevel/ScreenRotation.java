@@ -171,9 +171,17 @@ public class ScreenRotation extends ContextWrapper {
         return null;
     }
 
-//    @Override // Missed in classdescription,but is called
+//    @Override // Missed in class description, but is called
     android.view.Display getDisplay() {
         return IDisplayManager.getDefaultDisplay();
+    }
+
+//    @Override // It is @hide
+    public int getDisplayId() {
+        // This works
+//        return android.view.Display.DEFAULT_DISPLAY;
+        // But this is consistent
+        return getDisplay().getDisplayId();
     }
 
     @Override
