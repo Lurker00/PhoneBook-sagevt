@@ -214,4 +214,9 @@ public class ScreenRotation extends ContextWrapper {
     public String getBasePackageName() {
         return SERVICE_NAME;
     }
+
+    @Override
+    public String getPackageName() {
+        return SERVICE_NAME;
+    }
 }
