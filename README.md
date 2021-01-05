@@ -35,8 +35,8 @@ This renders the #1 feature useless: the app continues re-calculating touch coor
 
 You can use Android shell `wm` command to change the screen resolution before attaching the device to the PhoneBook, and `adb shell wm size reset` after that.
 
-## Anyware app kills the applet process on device detach
-This makes impossible graceful applet shutdown with restoring the device to the original state. The current workaround is exactly to use `su`: the app has no permissions to kill the applet. Again, this can be easily fixed by Anyware.
+## Android kills the applet process on device detach
+When an Android device disconnects from PhoneBook, the device's USB port state changes leading to adb restart. Android's `init` process kills all the service child processes on `stop service` command (`issued for `adbd` here). This makes impossible graceful applet shutdown with restoring the device to the original state. The current workaround is exactly to use `su`: the `init` has no permissions to kill the applet launched under `su`.
 
 ## PhoneBook firmware injects the files on each device attach
 This is solved by the installation script I wrote, that protects the files by fiesystem permissions. A good side effect is that applet's Dalvik cache is kept between sessions, making the 2nd and further runs slightly faster.
